@@ -211,6 +211,7 @@ sensor:
             - 9.9171 -> 7.9830
           # Normalize for plug load
           - lambda: if (x < 0.0260) return 0; else return (x - 0.0260);
+          - throttle_average: ${sensor_update_interval}
       on_value_range:
         - above: ${current_limit}
           then:
@@ -224,6 +225,7 @@ sensor:
       icon: mdi:sine-wave
       filters:
         - skip_initial: 2
+        - throttle_average: ${sensor_update_interval}
 
     power:
       name: "Power"
@@ -243,6 +245,7 @@ sensor:
             - 2043.0282 -> 885.0000
           # Normalize for plug load
           - lambda: if (x < 1.5600) return 0; else return (x - 1.5600);
+          - throttle_average: ${sensor_update_interval}
     change_mode_every: 1
     update_interval: 5s
 
@@ -256,6 +259,7 @@ sensor:
       filters:
          # Multiplication factor from W to kW is 0.001
         - multiply: 0.001
+        - throttle_average: ${sensor_update_interval}
       on_value:
         then:
           - lambda: |-
@@ -288,6 +292,7 @@ sensor:
     restore: true
     filters:
       - multiply: 0.001
+      - throttle_average: ${sensor_update_interval}
 
 
 button:
