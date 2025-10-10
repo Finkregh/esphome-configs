@@ -133,12 +133,6 @@ select:
 binary_sensor:
   - platform: status
     name: "Status"
-    entity_category: diagnostic    
-
-
-binary_sensor:
-  - platform: status
-    name: "Status"
     icon: mdi:check-network-outline
     entity_category: diagnostic
 
