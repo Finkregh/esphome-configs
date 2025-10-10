@@ -10,10 +10,8 @@ substitutions:
   relay_restore_mode: RESTORE_DEFAULT_OFF
   # Current Limit in Amps. AU Plug = 10. IL, BR, EU, UK, US Plug = 16.
   current_limit : "16"
-  # Define a domain for this device to use. i.e. iot.home.lan (so device will appear as athom-smart-plug-v2.iot.home.lan in DNS/DHCP logs)
-  dns_domain: ".local"
   # Enables faster network connections, with last connected SSID being connected to and no full scan for SSID being undertaken
-  wifi_fast_connect: "false"
+  wifi_fast_connect: "true"
   # Define logging level: NONE, ERROR, WARN, INFO, DEBUG (Default), VERBOSE, VERY_VERBOSE
   log_level: "INFO"
   # Enable or disable the use of IPv6 networking on the device
@@ -23,7 +21,6 @@ substitutions:
   # Power plug icon selection. Change to reflect the type/country of powr plug in use, this will update the power plug icon shown next to the switch
   power_plug_type: "power-socket-de"  # Options: power-socket-au | power-socket-ch | power-socket-de | power-socket-eu | power-socket-fr | power-socket-it | power-socket-jp | power-socket-uk | power-socket-us |
 
- 
   # Higher value gives lower watt readout
   current_res: "0.00280"
   # Lower value gives lower voltage readout
