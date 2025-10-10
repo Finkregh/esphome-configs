@@ -35,7 +35,7 @@ esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
   comment: "${device_description}"
-  area: "${room}"
+  area: "${area}"
   name_add_mac_suffix: false
   min_version: 2024.6.0
   project:
