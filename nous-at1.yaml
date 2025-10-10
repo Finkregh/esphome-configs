@@ -20,12 +20,15 @@ substitutions:
   ipv6_enable: "true"
   # Hide the ENERGY sensor that shows kWh consumed, but with no time period associated with it. Resets when device restarted and reflashed.
   hide_energy_sensor: "true"
+  # Power plug icon selection. Change to reflect the type/country of powr plug in use, this will update the power plug icon shown next to the switch
+  power_plug_type: "power-socket-de"  # Options: power-socket-au | power-socket-ch | power-socket-de | power-socket-eu | power-socket-fr | power-socket-it | power-socket-jp | power-socket-uk | power-socket-us |
 
+ 
   # Higher value gives lower watt readout
   current_res: "0.00280"
   # Lower value gives lower voltage readout
   voltage_div: "775"
-  flash_write_interval: "10m"
+  flash_write_interval: "600s" # 10 min
 
 dashboard_import:
   package_import_url: github://finkregh/esphome-configs/nous-at1.yaml
