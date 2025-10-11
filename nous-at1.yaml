@@ -5,7 +5,7 @@ substitutions:
   room: ""
   device_description: "Nous AT1 Wall Outlet"
   project_name: "finkregh.Nous AT1"
-  project_version: "v0.0.3"
+  project_version: "v0.0.4"
   sensor_update_interval: "10s"
   relay_restore_mode: RESTORE_DEFAULT_OFF
   # Current Limit in Amps. AU Plug = 10. IL, BR, EU, UK, US Plug = 16.
@@ -28,8 +28,8 @@ substitutions:
   flash_write_interval: "600s" # 10 min
 
 dashboard_import:
-  package_import_url: github://finkregh/esphome-configs/nous-at1.yaml
-  import_full_config: false
+  package_import_url: github://finkregh/esphome-configs/nous-at1.yaml@main
+  import_full_config: true
 
 esphome:
   name: "${name}"
@@ -179,6 +179,11 @@ sensor:
     entity_category: diagnostic
     device_class: ""
     icon: mdi:wifi
+
+  - platform: adc
+    pin: VCC
+    name: "Chip Voltage"
+    icon: mdi:flash-outline
 
   - platform: hlw8012
     id: nous_a1t_hlw8012
