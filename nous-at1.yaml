@@ -5,7 +5,7 @@ substitutions:
   room: ""
   device_description: "Nous AT1 Wall Outlet"
   project_name: "finkregh.Nous AT1"
-  project_version: "v0.0.2"
+  project_version: "v0.0.3"
   sensor_update_interval: "10s"
   relay_restore_mode: RESTORE_DEFAULT_OFF
   # Current Limit in Amps. AU Plug = 10. IL, BR, EU, UK, US Plug = 16.
@@ -35,7 +35,7 @@ esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
   comment: "${device_description}"
-  area: "${area}"
+  area: "${room}"
   name_add_mac_suffix: false
   min_version: 2024.6.0
   project:
