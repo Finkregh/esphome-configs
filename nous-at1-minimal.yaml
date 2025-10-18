@@ -1,0 +1,25 @@
+# Use this to switch from tasmota to esphome, after flashing this you can extend the config
+
+esphome:
+  name: nous-minimal
+  friendly_name: "minial-extendme"
+
+esp8266:
+  board: esp8285
+  restore_from_flash: true
+  early_pin_init: False
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  fast_connect: on
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+logger:
+  level: NONE
+
+web_server:
+  port: 80
