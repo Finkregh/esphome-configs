@@ -96,6 +96,7 @@ wifi:
   ap: {}
   # Allow rapid re-connection to previously connect WiFi SSID, skipping scan of all SSID
   fast_connect: "${wifi_fast_connect}"
+  min_auth_mode: WPA2
 
 mdns:
   disabled: false
